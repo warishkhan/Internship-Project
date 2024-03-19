@@ -1,0 +1,51 @@
+@import "../../sass/default/variable";
+
+.modal-title,
+.modal-subtitle {
+  color: $base-color4;
+}
+
+.modal-body img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+// three dots icons css
+.options-menu {
+  position: relative;
+}
+
+.options-icon {
+  cursor: pointer;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 7rem !important;
+  text-align: center;
+}
+
+.options-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.options-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.options-menu:hover .options-list {
+  display: block;
+}
+
