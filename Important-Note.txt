@@ -1,0 +1,20 @@
+Here are the notes detailing the changes made to the given project:
+
+Added Redux for state management: Implemented Redux to manage the application's state efficiently, providing a centralized store for managing data.
+
+Made the page dynamic using API data: Utilized API data to make the page content dynamic, fetching information such as service details, testimonials, and social media handles from the backend API.
+
+Made the portfolio page dynamic:
+
+Made the title dynamic: Dynamically updated the page title based on the fetched data from the API.
+Made the logo dynamic: Incorporated API names to dynamically generate the logo, enhancing the branding of the portfolio page. Additionally, applied CSS styling to the name and made it dynamic using the fetched API data.
+Added WhatsApp API in phoneNumber: Utilized the WhatsApp API to enhance user interaction, allowing users to directly contact via WhatsApp through the provided phone number.
+Ensured dynamic service cards:
+
+Addressed dynamic content size issue: Implemented a solution to ensure that service cards adjust their size based on the content length. If a card has more content than others, its size increases accordingly.
+Added a "Read More" button to service cards: Enhanced user experience by adding a "Read More" button to service cards, enabling users to expand the content and view additional details if necessary.
+Ensured dynamic review cards:
+
+Implemented similar functionality as service cards: Applied the same approach used for service cards to review cards, ensuring that their size adjusts dynamically based on content length.
+Added a "Read More" button to review cards: Enhanced user interaction by including a "Read More" button in review cards, allowing users to expand the content and view complete reviews.
+These changes enhance the overall functionality, user experience, and visual appeal of the portfolio page, making it more engaging and user-friendly.
