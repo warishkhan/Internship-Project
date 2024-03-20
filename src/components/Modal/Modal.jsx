@@ -1,17 +1,10 @@
 import './Modal.scss'; 
-import React, { useState } from 'react'; 
-import { FaEllipsisV, FaGithub, FaLink } from 'react-icons/fa'; // Import FontAwesome icons
-import { Link } from 'react-router-dom'; 
+import React from 'react';  
+import { FaGithub} from 'react-icons/fa'; // Import FontAwesome icons
+
 
 const Modal = ({ img, title, subTitle, modalClose, githuburl, liveurl }) => {
-  // State to manage visibility of options menu
-  const [showOptions, setShowOptions] = useState(false);
-
-  // Function to toggle visibility of options menu
-  const toggleOptions = () => {
-    setShowOptions(!showOptions);
-  };
-
+ 
   // Inline style for modal background
   const modalStyle = {
     backgroundColor: 'rgba(0,0,0,0.8)',
@@ -25,25 +18,6 @@ const Modal = ({ img, title, subTitle, modalClose, githuburl, liveurl }) => {
           <div className="modal-header">
             {/* Title */}
             <h4 className="modal-title">{title}</h4>
-
-            {/* Options menu */}
-            <div className="options-menu" title="click to view links">
-              <FaEllipsisV className="options-icon" onClick={toggleOptions} />
-              {/* Show options list if showOptions is true */}
-              {showOptions && (
-                <ul className="options-list">
-                  {/* Link to GitHub */}
-                  <li>
-                    <Link to={githuburl}>Github</Link> <FaGithub />
-                  </li>
-                  {/* Link to live website */}
-                  <li>
-                    <Link to={liveurl}>Live</Link> <FaLink />
-                  </li>
-                </ul>
-              )}
-            </div>
-
             {/* Close button */}
             <button type="button" className="btn-close" onClick={modalClose}></button>
           </div>
@@ -56,6 +30,10 @@ const Modal = ({ img, title, subTitle, modalClose, githuburl, liveurl }) => {
             {/* Subtitle */}
             <p className="modal-subtitle">{subTitle}</p>
           </div>
+          <div className='st-portfolio-btns d-flex justify-content-between align-items-center mb-4 px-3'>
+        <a href={liveurl} className='st-btn-2 st-style-2 st-color2 mt-3'>Live URL</a>
+        <a href={githuburl} className='st-btn-3 st-style-3 st-color3 mt-3'><span className='me-1'><FaGithub/></span> GitHub</a>
+      </div>
         </div>
       </div>
     </div>

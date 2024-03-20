@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'; 
 import { Icon } from '@iconify/react';
+import { FaGithub} from 'react-icons/fa'; // Import FontAwesome icons
 
 const SinglePortfolio = ({ data, getData }) => {
   // Destructure data object
@@ -27,6 +28,10 @@ const SinglePortfolio = ({ data, getData }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className='st-portfolio-btns d-flex justify-content-between align-items-center mb-4'>
+        <a href={liveurl} className='st-btn st-style2 st-color1 mt-3'>Live URL</a>
+        <a href={githuburl} className='st-btn st-style2 st-color3 mt-3'><span className='me-1'><FaGithub/></span> GitHub</a>
       </div>
     </div >
   );

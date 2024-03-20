@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home';
 import Home2 from './pages/Home2';
@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 import Layout2 from './components/Layout/Layout2';
 
 function App() {
+  const[bgChange,setBgChange] = useState(false)
   useEffect(() => {
     Aos.init({ once: true });
   }, []);
@@ -19,8 +20,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        <Route path="/" element={<Layout  setBgChange={setBgChange}/>}>
+          <Route index element={<Home bgChange={bgChange}/>} />
           <Route path="home-v3" element={<Home3 />} />
           <Route path="home-v4" element={<Home4 />} />
           <Route path="*" element={<Page404 />} />

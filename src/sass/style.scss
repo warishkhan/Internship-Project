@@ -3,3 +3,88 @@
 @import "default/spacing";
 @import "default/general";
 @import "../components/Button/Button.scss";
+
+:root {
+  --body_background: #486d7e;
+  --body_color: white;
+  --text-shodow-color: rgb(187, 180, 180);
+  --text_color: #95cae2;
+  --box-color: #354e5a;
+  --card-color: #4f6d7a;
+  --bg-text: #e4e9f4;
+  --text-visibility: hidden;
+  --text-subtitle: #fec544;
+}
+
+[data-theme="dark"] {
+  --body_background: #0a101e;
+  --text-shodow-color: #0a101e;
+  --body_color: white;
+  --text_color: white;
+  --box-color: #0a101e;
+  --card-color: #101624;
+  --bg-text: #151b29;
+  --text-visibility: visible;
+  --text-subtitle: #a9adb8;
+}
+
+body {
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
+
+* {
+  transition: all 0.5s ease-in-out;
+}
+
+.st-sub-title {
+  color: var(--text-subtitle) !important;
+}
+
+.st-hero-img {
+  box-shadow: 0px 3px 4px 0px var(--box-color);
+}
+
+.st-hero-wrap {
+  background-color: var(--body_background) !important;
+}
+
+.st-social-group {
+  background-color: var(--card-color);
+}
+
+.hero-text-name {
+  color: var(--text_color) !important;
+  text-shadow: 5px 5px 5px var(--text-shodow-color);
+}
+
+.st-about-img {
+  box-shadow: 4px 4px 4px 0px var(--box-color);
+  border-radius: 5px;
+}
+
+.st-iconbox.st-style1 {
+  background-color: var(--card-color) !important;
+}
+
+.st-dark-bg {
+  background-color: var(--body_background);
+}
+
+.st-btn.st-style1.st-color1 {
+  box-shadow: 0px 5px 5px var(--text-shodow-color) !important;
+}
+
+.st-section-heading-subtitle {
+  color: var(--bg-text) !important;
+}
+
+.st-section-heading-title {
+  visibility: var(--text-visibility);
+}
+
+@media screen and (max-width: 992px) {
+  .st-section-heading-title {
+    visibility: visible;
+  }
+}

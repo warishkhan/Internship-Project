@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../actions/dataActions';
 import MetaData from '../../MetaData';
 
-const Hero = ({ data }) => {
+const Hero = ({ data}) => {
   // Dispatch action to fetch data from Redux store
   const dispatch = useDispatch();
   // Extract 'myData' from Redux store state
@@ -49,6 +49,7 @@ const Hero = ({ data }) => {
   // Get full name from 'about' object or use default name "Davis"
   var fullName = about ? about.name : "Davis";
   var firstName = getFirstName(fullName);
+  const imgLocal = localStorage.getItem("setImage")
 
   return (
     <>
@@ -57,7 +58,7 @@ const Hero = ({ data }) => {
     <section id="home" className="st-hero-wrap">
       <div
         className="st-hero st-bg st-style1"
-        style={{ backgroundImage: `url(${bgImgLink})` }}
+        style={{ backgroundImage: `url(${imgLocal ? "https://images.unsplash.com/photo-1599840209204-bcbcdb6141e9?q=80&w=1786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D":bgImgLink})` }}
       >
         <div className="st-height-b80 st-height-lg-b80"></div>
         <div className="container">
@@ -66,10 +67,10 @@ const Hero = ({ data }) => {
               {subTitle}
             </h3>
             {/* Parse and display the first name with line break using parser */}
-            <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <h1 className='hero-text-name' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               {myData.about && parser((myData.about.name).replace(' ','<br>'))}
             </h1>
-            <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+            <h2 className='st-sub-title' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
               {myData.about && myData.about.title}
             </h2>
             <div
@@ -85,13 +86,14 @@ const Hero = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="st-hero-img st-to-right">
+      <div className="st-hero-img st-to-right rounded">
         <img
           src={about && about.avatar ? `${(about && about.avatar) && about.avatar.url}`: imgLink}
           alt="Hero"
           data-aos="fade-left"
           data-aos-delay="1000"
           data-aos-duration="1000"
+          className='rounded'
         />
         <div
           className="st-social-group"

@@ -6,7 +6,7 @@ import Preloader from '../Preloader/Preloader';
 import CustomCursor from '../CustomCursor/CustomCursor';
 
 
-const Layout = () => {
+const Layout = ({setBgChange}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Layout = () => {
       {isLoading ? <Preloader /> : (
         <div>
           <CustomCursor />
-          <Header />
+          <Header setBgChange={setBgChange}/>
           <Outlet />
           <Footer />
         </div>

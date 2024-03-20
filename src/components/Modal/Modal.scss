@@ -10,42 +10,74 @@
   margin-bottom: 20px;
 }
 
-// three dots icons css
-.options-menu {
-  position: relative;
+// buttons
+
+.st-btn-2.st-style-2.st-color2 {
+  background-color: #fec544;
+  color: #070d1b;
 }
 
-.options-icon {
+.st-btn-3.st-style-3{
+  background-color: #070d1b;
+  color: #fec544;
+}
+ 
+
+.st-btn-3.st-style-3 {
+  border: 1px solid;
+  padding: 0.69em 3.2em;
+}
+
+.st-btn-3.st-style-3 {
+  border: 1px solid;
+  padding: 0.69em 3.2em;
+}
+
+.st-btn-3.st-style-3 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5em;
+  font-weight: 500;
+  padding: 12px 1.5em;
+  border-radius: 50px;
+  min-width: 170px;
+  border: none;
+  outline: none;
+  transition: all .4s ease;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.st-btn-2.st-style-2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5em;
+  font-weight: 500;
+  padding: 12px 1.5em;
+  border-radius: 50px;
+  min-width: 170px;
+  border: none;
+  outline: none;
+  transition: all .4s ease;
+  text-transform: capitalize;
   cursor: pointer;
 }
 
-.options-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  width: 7rem !important;
-  text-align: center;
+.st-portfolio-btns a {
+  min-width: calc(50% - 15px) !important;
+  box-sizing: border-box !important;
+  font-size: 14px !important;
+  padding: 10px 30px !important;
+  color: #f1f1f1;
 }
 
-.options-list li {
-  padding: 8px 12px;
-  cursor: pointer;
+@media screen and (max-width:300px){
+  .st-btn-2.st-style-2.st-color2{
+   font-size: 13px !important;
+  }
 }
-
-.options-list li:hover {
-  background-color: #f0f0f0;
-}
-
-.options-menu:hover .options-list {
-  display: block;
-}
-

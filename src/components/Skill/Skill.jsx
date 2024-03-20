@@ -55,7 +55,7 @@ const Skill = ({ data }) => {
                 <div
                   className="st-single-progressbar"
                   key={index}
-                  data-aos={element.effect}
+                  // data-aos={"fade-up"}
                   data-aos-duration={"500"}
                   data-aos-delay={"500"}
                 >
@@ -73,8 +73,8 @@ const Skill = ({ data }) => {
                     </div>
                   </div>
                   {/* Progress bar */}
-                  <div className="st-progressbar" data-progress="95">
-                    <div className="st-progressbar-in "></div>
+                  <div className="st-progressbar" data-progress={element.percentage}>
+                    <div className="st-progressbar-in " style={{width:`${element.percentage}%`}}></div>
                   </div>
                   {/* Spacing */}
                   <div className="st-height-b30 st-height-lg-b20"></div>

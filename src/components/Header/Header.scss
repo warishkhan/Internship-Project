@@ -38,6 +38,39 @@
   border: 3px solid  #fec544;
 }
 
+// dark-Mode Button
+
+.dark-mode{
+  position: absolute;
+  right: 6.5%;
+}
+
+@media screen and (max-width: 300px){
+  .dark-mode{
+    top: 25%;
+    right: 15% !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px){
+  .dark-mode{
+    top: 25%;
+    right: 13% !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .dark-mode{
+    top: 25%;
+    right: 7.5% !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1350px){
+  .dark-mode{
+    top: 25%;
+    right: 80% !important;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .st-main-header .container {
     max-width: 100%;
@@ -45,6 +78,10 @@
 
   .st-site-header.st-style1 {
     background-color: $dark-color2;
+  }
+  .dark-mode{
+    top: 25%;
+    right: 10%;
   }
 }
 
@@ -134,7 +171,7 @@
     .st-nav-list li:last-child {
       margin-right: 0;
     }
-    .sp-phone {
+    .sp-phone{
       display: none;
     }
   }
@@ -202,7 +239,7 @@
       position: relative;
     }
 
-    .sp-phone {
+    .sp-phone{
       display: none;
     }
   }

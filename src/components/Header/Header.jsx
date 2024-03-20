@@ -4,8 +4,9 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useEffect, useState } from 'react'; 
 import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector hooks from React Redux
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
+import DarkMode from '../DarkMode/DarkMode';
 
-const Header = () => {
+const Header = ({setBgChange}) => {
   const dispatch = useDispatch(); // Initialize Redux dispatch hook
   const { myData } = useSelector(state => state.data); // Select 'myData' from Redux store state
   const [isScrolled, setIsScrolled] = useState(false); // State variable to track scrolling state
@@ -58,6 +59,9 @@ const Header = () => {
             <div className="st-main-header-left">
               {/* Render site branding with dynamic name */}
               <Link className="st-site-branding" to='/' id="hero"><h3 className='headerName'>{firstName}</h3></Link>
+            </div>
+            <div className='dark-mode'>
+            <DarkMode setBgChange={setBgChange}/>
             </div>
             <div className="st-main-header-right">
               <div className="st-nav">

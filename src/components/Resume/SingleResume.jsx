@@ -45,7 +45,7 @@ const SingleResume = ({ element }) => {
           <div className="st-resume-timeline-duration">{durationString}</div>
           <h4 className="st-resume-timeline-subtitle">{jobLocation}</h4>
           <div className="st-resume-timeline-text">
-            {(bulletPoints && bulletPoints.length) && bulletPoints.map((point, index) => <p key={index}>{point}</p>)}
+            {(bulletPoints && bulletPoints.length) && bulletPoints.slice(0,1).map((point, index) => <p key={index}>{point}</p>)}
           </div>
           <div className="st-resume-timeline-text mt-3"><p>{summary}</p></div>
         </div>
