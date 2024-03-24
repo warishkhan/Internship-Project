@@ -46,7 +46,7 @@ const Hero2 = ({ data }) => {
             {/* Display dynamic name with style */}
             <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>{myData.about && myData.about.name}</span></h1>
             {/* Display dynamic description */}
-            <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
+            <p className='text-white' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
             {/* Render SocialLinks2 component */}
             <SocialLinks2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="500" />
           </div>

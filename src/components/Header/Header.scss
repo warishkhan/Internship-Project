@@ -47,14 +47,14 @@
 
 @media screen and (max-width: 300px){
   .dark-mode{
-    top: 25%;
+    top: 27% !important;
     right: 15% !important;
   }
 }
 
 @media screen and (min-width: 300px) and (max-width: 768px){
   .dark-mode{
-    top: 25%;
+    top: 26% !important;
     right: 13% !important;
   }
 }
@@ -68,6 +68,10 @@
   .dark-mode{
     top: 25%;
     right: 80% !important;
+  }
+  .dark-mode.dark-mode-2{
+    top: 42%;
+    right: 15% !important;
   }
 }
 

@@ -58,7 +58,7 @@ const Hero = ({ data}) => {
     <section id="home" className="st-hero-wrap">
       <div
         className="st-hero st-bg st-style1"
-        style={{ backgroundImage: `url(${imgLocal ? "https://images.unsplash.com/photo-1599840209204-bcbcdb6141e9?q=80&w=1786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D":bgImgLink})` }}
+        style={{ backgroundImage: `url(${imgLocal ? "":bgImgLink})` }}
       >
         <div className="st-height-b80 st-height-lg-b80"></div>
         <div className="container">

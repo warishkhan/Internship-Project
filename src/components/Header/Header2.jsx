@@ -3,6 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { useEffect, useState } from 'react'; 
 import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector hooks from React Redux
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
+import DarkMode from '../DarkMode/DarkMode';
 
 const Header2 = () => {
   // State variable to toggle mobile menu
@@ -38,6 +39,9 @@ const Header2 = () => {
                   data-aos-duration="1000"
                 />
               </div>
+            </div>
+            <div className='dark-mode dark-mode-2'>
+            <DarkMode/>
             </div>
             <div className="st-main-header-right">
               <div className="st-nav">

@@ -22,7 +22,7 @@ const SocialLinks2 = () => {
       {(myData.social_handles && myData.social_handles.length) && myData.social_handles.map((item, index) => (
         <Link to={item.link} className="st-social-btn" key={index}>
           {/* Social icon */}
-          <span className="st-social-icon"><Icon icon={`fa6-brands:${String(item.platform).toLowerCase()}`} /></span>
+          <span className="st-social-icon text-white"><Icon icon={`fa6-brands:${String(item.platform).toLowerCase()}`} /></span>
         </Link>
       ))}
     </div>

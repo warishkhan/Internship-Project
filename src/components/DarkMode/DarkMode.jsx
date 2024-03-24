@@ -1,5 +1,6 @@
 import React from "react";
 import "./DarkMode.css";
+import { FaSun, FaMoon} from "react-icons/fa";
 
 const DarkMode = ({setBgChange}) => {
   const setDarkMode = () => {
@@ -27,7 +28,7 @@ const DarkMode = ({setBgChange}) => {
     else{ 
       setLightMode();
       setBgChange(true)
-    localStorage.setItem("setImage", "true");
+      localStorage.setItem("setImage", "true");
     }
   };
   return (
@@ -40,6 +41,8 @@ const DarkMode = ({setBgChange}) => {
         defaultChecked={selectedTheme === "dark"}
       />
       <label className="dark_mode_label" htmlFor="darkmode-toggle">
+    <FaSun className="sunMoon sun" size={25}/>
+    <FaMoon className="sunMoon moon" size={25}/>
       </label>
     </div>
   );

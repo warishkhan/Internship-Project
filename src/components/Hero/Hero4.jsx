@@ -43,7 +43,7 @@ const Hero4 = ({ data, socialData }) => {
           {/* Display dynamic name with style */}
           <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>{myData.about && myData.about.name}</span></h1>
           {/* Display dynamic description */}
-          <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
+          <p className='text-white' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
           {/* Render SocialLinks2 component with social data */}
           <SocialLinks2 data={socialData} />
         </div>
