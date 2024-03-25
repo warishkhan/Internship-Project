@@ -4,6 +4,7 @@ import SectionHeading from '../SectionHeading/SectionHeading'; // Im
 import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector hooks from React Redux
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
 import { useEffect } from 'react';
+import Typewriter from "typewriter-effect";
 
 const About = ({ data }) => {
   const dispatch = useDispatch(); // Initialize Redux dispatch hook
@@ -37,7 +38,18 @@ const About = ({ data }) => {
                   {/* Display dynamic name */}
                   <h2 className="st-text-block-title">{myData.about && myData.about.name}</h2>
                   {/* Display dynamic title */}
-                  <h4 className="st-text-block-subtitle">{myData.about && myData.about.title}</h4>
+                  {/* <h4 className="st-text-block-subtitle">{myData.about && myData.about.title}</h4> */}
+                  <h4 className="st-text-block-subtitle">
+                  <Typewriter
+                  options={{
+                  strings: [
+                   `${myData.about && myData.about.title}`,
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+                  </h4>
                   <div className="st-text-block-text">
                     {/* Display dynamic description */}
                     <p>{myData.about && myData.about.description}</p>

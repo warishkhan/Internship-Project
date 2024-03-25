@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../actions/dataActions';
 import MetaData from '../../MetaData';
+import Particles_Bg_1 from '../Particles/Particles_Bg_1';
+import Typewriter from "typewriter-effect";
 
 const Hero = ({ data}) => {
   // Dispatch action to fetch data from Redux store
@@ -17,7 +19,7 @@ const Hero = ({ data}) => {
   // Extract 'subTitle' and 'bgImgLink' from 'data' prop
   const { subTitle, bgImgLink,imgLink } = data;
   // Extract 'about' object from 'myData'
-  const { about } = myData;
+  const { about} = myData;
 
   // Fetch data from API when component mounts
   useEffect(() => {
@@ -58,8 +60,13 @@ const Hero = ({ data}) => {
     <section id="home" className="st-hero-wrap">
       <div
         className="st-hero st-bg st-style1"
-        style={{ backgroundImage: `url(${imgLocal ? "":bgImgLink})` }}
+        style={{backgroundImage: `url(${imgLocal ? "https://plus.unsplash.com/premium_photo-1670659359754-02934f07580f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHRlY2hub2xvZ3klMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww":bgImgLink})` }}
       >
+     {
+      imgLocal ?  <div className='position-absolute top-0 left-0 particle-class'>
+        <Particles_Bg_1/>
+      </div> : ""
+     }
         <div className="st-height-b80 st-height-lg-b80"></div>
         <div className="container">
           <div className="st-hero-text">
@@ -70,8 +77,17 @@ const Hero = ({ data}) => {
             <h1 className='hero-text-name' data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               {myData.about && parser((myData.about.name).replace(' ','<br>'))}
             </h1>
-            <h2 className='st-sub-title' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-              {myData.about && myData.about.title}
+            <h2 className='st-sub-title fw-bold' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              {/* {myData.about && myData.about.title} */}
+              <Typewriter
+                options={{
+                  strings: [
+                   `${myData.about && myData.about.title}`,
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </h2>
             <div
               className="st-hero-btn"

@@ -10,8 +10,10 @@
   --text-shodow-color:#ffffffa6;
   --btn-shodow-color:#ffffffa6;
   --text-shodow-color-1:#0000004a;
+  --text-shodow-color-2:#b6b0b04a;
   --btn-shodow-color-1:#0000004a;
   --text_color: #297773;
+  --body_background-1:#297773;
   --text_skill-color:#12bdb4;
   --box-color: #354e5a;
   --card-color: #4f6d7a;
@@ -30,8 +32,10 @@
   --body_background: #0a101e;
   --text-shodow-color: #0a101e;
   --text-shodow-color-1:#0a101e;
+  --text-shodow-color-2:#0a101e;
   --btn-shodow-color:#fec544;
   --btn-shodow-color-1:#fec544;
+  --body_background-1:#0a101e;
   --body_color: white;
   --text_color: white;
   --text_skill-color:white;
@@ -46,6 +50,7 @@
   --header-first-letter:#fec544;
   --progress-bar:#fec544;
   --icon-text-color:#ffffff;
+
 }
 
 .st-main-header{
@@ -105,13 +110,13 @@ body {
   text-shadow: -3px -3px 5px  var(--text-shodow-color), 3px 3px 5px var(--text-shodow-color-1) !important;
 }
 
-.st-iconbox.st-style1 {
+.st-iconbox.st-style1{
   border: var(--border-none);
   background-color: var(--body_background) !important;
-  box-shadow: -3px -3px 5px 0px var(--text-shodow-color-1), 3px 3px 5px 0px var(--text-shodow-color-1) !important;
+  box-shadow: -3px -3px 5px 0px var(--text-shodow-color-2), 3px 3px 5px 0px var(--text-shodow-color-2) !important;
 }
 .st-iconbox.st-style1:hover{
-  box-shadow: -3px -3px 5px 0px var(--text-shodow-color-1) inset, 3px 3px 5px 0px var(--text-shodow-color-1) inset !important;
+  box-shadow: -3px -3px 5px 0px var(--text-shodow-color-2) inset, 3px 3px 5px 0px var(--text-shodow-color-2) inset !important;
 }
 
 .st-iconbox-title{
@@ -142,7 +147,7 @@ body {
 .st-btn.st-style1.st-color1, .st-btn.st-style2.st-color1{
   color: #0a101e !important;
   background-color: var(--btn-bg) !important;
-  box-shadow: -3px -3px 5px 0px var(--text-shodow-color), 3px 3px 5px 0px var(--text-shodow-color-1) !important;
+  box-shadow: 0px 0px 0px 0px var(--text-shodow-color), 3px 3px 5px 0px var(--text-shodow-color-1) !important;
 }
 
 .st-btn.st-style1.st-color1:hover, .st-btn.st-style2.st-color1:hover{
@@ -193,7 +198,22 @@ body {
 }
 
 .st-testimonial-text p{
-  color: #ffffff;
+  color: var(--body_color) !important;
+}
+
+.st-quote img{
+  visibility: var(--text-visibility) !important;
+}
+
+.st-testimonial-text{
+  background-color: var(--body_background) !important;
+}
+.st-testimonial-text:hover{
+  background-color: var(--body_background-1) !important;
+}
+
+.st-testimonial-text p:hover{
+  color: #fff !important;
 }
 
 .st-testimonial.st-style1{
@@ -203,7 +223,6 @@ body {
 .st-testimonial-name, .st-contact-title , .st-single-info-details h4{
   color: var(--body_color);
 }
-
 
 .st-icon-wrap{
   color: var(--text_skill-color);

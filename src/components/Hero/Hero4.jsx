@@ -5,6 +5,7 @@ import SocialLinks2 from '../SocialLinks/SocialLinks2';
 import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector hooks from React Redux
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
 import MetaData from '../../MetaData'; // Import MetaData component
+import Typewriter from "typewriter-effect";
 
 const Hero4 = ({ data, socialData }) => {
   const dispatch = useDispatch(); // Initialize Redux dispatch hook
@@ -30,6 +31,8 @@ const Hero4 = ({ data, socialData }) => {
   var fullName = about ? about.name : "Davis";
   var firstName = getFirstName(fullName);
 
+  const imgLocal = localStorage.getItem("setImage");
+
   return (
     <>
     {/* Dynamic Title */}
@@ -37,11 +40,21 @@ const Hero4 = ({ data, socialData }) => {
     <MetaData title={`${firstName} - Personal portfolio ReactJs template`} />
     {/* Hero section with dynamic background image */}
     <section id="home"
-      className="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" style={{ backgroundImage: `url(${bgImgLink})` }}>
+      className="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" style={{ backgroundImage:`url(${imgLocal ?  `${(about && about.avatar) && about.avatar.url}`:bgImgLink})` }}>
       <div className="container">
         <div className="st-hero-text">
           {/* Display dynamic name with style */}
-          <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>{myData.about && myData.about.name}</span></h1>
+          <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>
+          <Typewriter
+                options={{
+                  strings: [
+                   `${myData.about && myData.about.name}`,
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+          </span></h1>
           {/* Display dynamic description */}
           <p className='text-white' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
           {/* Render SocialLinks2 component with social data */}

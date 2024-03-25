@@ -7,6 +7,7 @@ import WaterWave from 'react-water-wave'; // Import WaterWave component
 import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch and useSelector hooks from React Redux
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
 import MetaData from '../../MetaData'; // Import MetaData component
+import Typewriter from "typewriter-effect";
 
 const Hero3 = ({ data, socialData }) => {
   const dispatch = useDispatch(); // Initialize Redux dispatch hook
@@ -32,13 +33,15 @@ const Hero3 = ({ data, socialData }) => {
   var fullName = about ? about.name : "Davis";
   var firstName = getFirstName(fullName);
 
+  const imgLocal = localStorage.getItem("setImage");
+
   return (
     <>
     {/* Dynamic Title */}
     {/* Setting dynamic title using MetaData component */}
     <MetaData title={`${firstName} - Personal portfolio ReactJs template`} />
     {/* WaterWave component for background with dynamic image */}
-    <WaterWave id="home" className="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" imageUrl={bgImgLink}>
+    <WaterWave id="home" className="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" imageUrl={imgLocal ? "https://images.unsplash.com/photo-1476897017502-219c9169bd6f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" : bgImgLink}>
       {() => (
         <div className="container">
           <div className="st-hero-text">
@@ -50,7 +53,17 @@ const Hero3 = ({ data, socialData }) => {
               />
             </div>
             {/* Display dynamic name */}
-            <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>{myData.about && myData.about.name}</span></h1>
+            <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Hi, I m <span className='text-warning'>
+            <Typewriter
+                options={{
+                  strings: [
+                   `${myData.about && myData.about.name}`,
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span></h1>
             {/* Display dynamic description */}
             <p className='text-white' data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">{myData.about && myData.about.description}</p>
             {/* Render SocialLinks2 component */}

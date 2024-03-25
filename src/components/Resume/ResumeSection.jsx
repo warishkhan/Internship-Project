@@ -10,8 +10,6 @@ const ResumeSection = ({ data }) => {
   const dispatch = useDispatch();
   const { myData } = useSelector(state => state.data);
 
-  console.log(myData);
-
   // Fetch data when the component mounts
   useEffect(() => {
     fetchData();

@@ -27,7 +27,7 @@ function App() {
           <Route path="*" element={<Page404 />} />
           <Route path="blog/blog-details" element={<BlogDetails />} />
         </Route>
-        <Route path="/home-v2" element={<Layout2 />}>
+        <Route path="/home-v2" element={<Layout2 setBgChange={setBgChange}/>}>
           <Route index element={<Home2 />} />
         </Route>
       </Routes>

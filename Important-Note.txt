@@ -1,9 +1,9 @@
-Project Updates Notes:
+Updated Notes:
 Added Dark and Light Mode with UI Reversal:
 
 Implemented dark and light mode functionality with a UI reversal feature.
 Upon toggling between dark and light modes, the background image and colors of cards and texts reverse accordingly.
-Enhanced user experience by providing a dynamic and visually appealing interface that adapts to user preferences.
+Fixed the Dark Mode Toggle Button: Replaced the text-based toggle button with an icon for better usability and aesthetics.
 Added Redux for State Management:
 
 Implemented Redux for efficient state management in the project.
@@ -32,6 +32,7 @@ Implemented Read More Button in Review Cards:
 
 Incorporated a "Read More" button in review cards to manage lengthy reviews.
 Enhanced usability by allowing users to expand reviews for better readability and understanding.
+Changed Review Card Color on Hover: Modified the color of review cards upon hover to provide visual feedback and improve interactivity.
 Made Skill Field Scrollable:
 
 Implemented a scrollable feature for the skill field to accommodate a large number of skills.
@@ -44,4 +45,27 @@ Corrected Progress Bars:
 
 Rectified issues with progress bars to ensure accurate representation of skill levels.
 Improved the visual presentation of skill levels for a more precise and informative display.
-These enhancements collectively contribute to improving the functionality, usability, and overall user experience of the project. Additionally, the implementation of dark and light mode with UI reversal adds a dynamic and visually appealing element to the user interface.
+Made Service Card Flipable:
+
+Implemented a flip feature for service cards to provide additional information on hover or click.
+Enhanced user interaction and engagement by enabling users to flip cards for more details about services.
+Mobile Responsiveness:
+
+Ensured that all enhancements are visible and fully functional on mobile devices.
+Improved accessibility and user experience by optimizing the project for various screen sizes and devices.
+Light Mode Utilizing White Background:
+
+For the light mode, utilized white color as the background to maintain a clean and minimalist design aesthetic.
+Added Particles.js Background on Hero Section:
+
+Integrated Particles.js background on the hero section to enhance visual appeal and create an engaging effect.
+Improved the aesthetics of the hero section by adding dynamic particle animations.
+Conditional Image Rendering:
+
+Implemented conditional image rendering based on certain criteria or states.
+Enhanced the flexibility of the project by dynamically displaying images based on specific conditions or data fetched from the API.
+Added Typewriter Effect on Hero Section and About Section:
+
+Incorporated typewriter effect on the hero section and about section to add dynamism and visual interest.
+Enhanced the user experience by introducing animated text effects that simulate typing for engaging content presentation.
+These enhancements collectively contribute to improving the functionality, usability, and overall user experience of the project. Additionally, the addition of particles.js background on the hero section adds an interactive and visually appealing element, further enhancing the project's visual appeal and engagement.

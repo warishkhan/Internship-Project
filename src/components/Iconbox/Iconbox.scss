@@ -6,6 +6,9 @@
   transition: all 0.4s ease;
   border: 1px solid $base-color4;
   background-color: $dark-color4;
+  width: min(100%,450px);
+  height: 350px;
+  margin: 10px;
   img {
     width: 52px;
     filter: grayscale(1);
@@ -69,4 +72,76 @@
   color:  #fec544;
   font-weight: bolder;
   letter-spacing: 2px;
+}
+
+//card csss
+
+.main-container{
+  position: relative;
+  width: min(100%, 450px);
+  height: 350px;
+  top: 0;
+  left: 0;
+}
+
+.box{
+  position: absolute;
+  width: min(100%,450px);
+  height: 350px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+}
+
+.box:hover .box-content{
+  transform: rotateY(180deg);
+}
+
+.box-content{
+  width: min(100%,450px);
+  height: 350px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.front, .back{
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+.front{
+  width: min(100%,450px);
+  height: 350px;
+  flex-direction: column;
+}
+
+.back{
+  width: min(100%,450px);
+  height: 340px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: #151b29;
+  flex-direction: column;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.back-image{
+  height: 340px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: -1 !important;
+  height: 150px !important;
+  margin-bottom: 15px !important;
 }

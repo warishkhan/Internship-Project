@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'; // Import useDispatch an
 import { fetchData } from '../../actions/dataActions'; // Import fetchData action
 import DarkMode from '../DarkMode/DarkMode';
 
-const Header2 = () => {
+const Header2 = ({setBgChange}) => {
   // State variable to toggle mobile menu
   const [mobileToggle, setMobileToggle] = useState(false);
 
@@ -41,7 +41,7 @@ const Header2 = () => {
               </div>
             </div>
             <div className='dark-mode dark-mode-2'>
-            <DarkMode/>
+            <DarkMode setBgChange={setBgChange}/>
             </div>
             <div className="st-main-header-right">
               <div className="st-nav">
