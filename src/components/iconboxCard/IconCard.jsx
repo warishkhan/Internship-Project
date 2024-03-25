@@ -48,11 +48,12 @@ const IconCard = () => {
         {/* <p className="st-iconbox-text mb-1 text-info">{element.charge}</p> */}
         <div className="st-iconbox-text">
           {/* Render expanded description if expanded, otherwise truncate */}
-          {expandedArray[index] ? element.desc : element.desc.substring(0, 20) + '... '}
-          <span className='text-warning' onClick={() => toggleExpanded(index)}>
+          {/* {expandedArray[index] ? element.desc : element.desc.substring(0, 20) + '... '} */}
+          {/* <span className='text-warning' onClick={() => toggleExpanded(index)}> */}
             {/* Render toggle button text based on expanded state */}
-            {expandedArray[index] ? 'Show less' : 'Read more'}
-          </span>
+            {/* {expandedArray[index] ? 'Show less' : 'Read more'} */}
+          {/* </span> */}
+          {element.desc}
         </div>
       </div>
     </div>
